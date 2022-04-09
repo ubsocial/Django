@@ -31,10 +31,12 @@
         21.2.1- Title: Projeto de ToDo UB Social (Clicar em Save)
         21.2.2- Title: Projeto de ToDo2 UB Social (Clicar em Save)
 
+### Listar Tasks:
 22- Em tasks/views.py, informar 'from .models' e aprimorar view index
 23- Em tasks/templates/list.html, preencher template
 23.1- No browser, recarregar index(http://127.0.0.1:8000) e verificar se lista de tasks adicionadas no admin serão mostradas
 
+### Inserir Task:
 24- Em tasks, criar novo arquivo 'forms.py' (Será a model TaskForm)
 24.1- Em tasks/views.py, incluir 'from .forms'
 25- Em tasks/templates/list.html
@@ -43,4 +45,19 @@
 26- Em tasks/views.py, incluir if (Incluir 'redirect' no from)
 27- No Browser, testar inserções de tasks
 
-PAROU EM 22:00min
+#### Editar Task:
+28- Em tasks/templates, criar 'update_task.html'
+29- Em tasks/views.py, criar view updateTask (def updateTask)
+30- Em tasks/urls.py, adicionar rota update_task (path)
+31- Em tasks/templates/list.html, incluir &lt;a&gt; Update
+31.1- No browser, testar editar alguma task
+
+### Deletar Task:
+32- Em tasks/templates, criar 'delete.html'
+33- Em tasks/views.py, criar view deleteTask (def deleteTask)
+34- Em tasks/urls.py, adicionar rota delete_task (path)
+35- Em tasks/templates/list.html, incluir &lt;a&gt; Delete
+35.1- No browser, testar deletar alguma task
+
+### Marcar Task completa/incompleta:
+36- Em tasks/templates/list.html, incluir 'if task.complete'
