@@ -18,46 +18,45 @@
 
 13- Em tasks, criar pasta 'templates' com subpasta 'tasks'
 14- Dentro da pasta acima, criar arquivo 'list.html'
-16- Em tasks/views.py, informar rota index
-    16.1- Recarregar browser para conferir se rota está funcionando (Irá para list.html)
+15- Em tasks/views.py, informar rota index
+    15.1- Recarregar browser para conferir se rota está funcionando (Irá para list.html)
 
-17- Em tasks/models.py, criar model Task (class Task)
-18- Montar migrations (Criar model 'task'): python3 manage.py makemigrations
-19- Criar migrations: python3 manage.py migrate
-20- Executar projeto: python3 manage.py runserver
-21- Em tasks/admin.py, informar 'from .models' e 'admin.site.register'
-    21.1- No browser, acessar painel admin (http://127.0.0.1:8000/admin), mostrará novo grupo 'Tasks'
-    21.2- Acessar e, após, clicar em 'add task':
-        21.2.1- Title: Projeto de ToDo UB Social (Clicar em Save)
-        21.2.2- Title: Projeto de ToDo2 UB Social (Clicar em Save)
+16- Em tasks/models.py, criar model Task (class Task)
+17- Montar migrations (Criar model 'task'): python3 manage.py makemigrations
+18- Criar migrations: python3 manage.py migrate
+19- Executar projeto: python3 manage.py runserver
+20- Em tasks/admin.py, informar 'from .models' e 'admin.site.register'
+    20.1- No browser, acessar painel admin (http://127.0.0.1:8000/admin), mostrará novo grupo 'Tasks'
+    20.2- Acessar e, após, clicar em 'add task':
+        20.2.1- Title: Projeto de ToDo UB Social (Clicar em Save)
+        20.2.2- Title: Projeto de ToDo2 UB Social (Clicar em Save)
 
 ### Listar Tasks:
-22- Em tasks/views.py, informar 'from .models' e aprimorar view index
-23- Em tasks/templates/list.html, preencher template
-23.1- No browser, recarregar index(http://127.0.0.1:8000) e verificar se lista de tasks adicionadas no admin serão mostradas
+21- Em tasks/views.py, informar 'from .models' e aprimorar view index
+22- Em tasks/templates/list.html, preencher template
+    22.1- No browser, recarregar index(http://127.0.0.1:8000) e verificar se lista de tasks adicionadas no admin serão mostradas
 
 ### Inserir Task:
-24- Em tasks, criar novo arquivo 'forms.py' (Será a model TaskForm)
-24.1- Em tasks/views.py, incluir 'from .forms'
-25- Em tasks/templates/list.html
-25.1- No browser, recarregar index e verificar se aparece form de criação de task
-
-26- Em tasks/views.py, incluir if (Incluir 'redirect' no from)
-27- No Browser, testar inserções de tasks
+23- Em tasks, criar novo arquivo 'forms.py' (Será a model TaskForm)
+    23.1- Em tasks/views.py, incluir 'from .forms'
+24- Em tasks/templates/list.html
+    24.1- No browser, recarregar index e verificar se aparece form de criação de task
+25- Em tasks/views.py, incluir if (Incluir 'redirect' no from)
+26- No Browser, testar inserções de tasks
 
 #### Editar Task:
-28- Em tasks/templates, criar 'update_task.html'
-29- Em tasks/views.py, criar view updateTask (def updateTask)
-30- Em tasks/urls.py, adicionar rota update_task (path)
-31- Em tasks/templates/list.html, incluir &lt;a&gt; Update
-31.1- No browser, testar editar alguma task
+27- Em tasks/templates, criar 'update_task.html'
+28- Em tasks/views.py, criar view updateTask (def updateTask)
+29- Em tasks/urls.py, adicionar rota update_task (path)
+30- Em tasks/templates/list.html, incluir &lt;a&gt; Update
+    30.1- No browser, testar editar alguma task
 
 ### Deletar Task:
-32- Em tasks/templates, criar 'delete.html'
-33- Em tasks/views.py, criar view deleteTask (def deleteTask)
-34- Em tasks/urls.py, adicionar rota delete_task (path)
-35- Em tasks/templates/list.html, incluir &lt;a&gt; Delete
-35.1- No browser, testar deletar alguma task
+31- Em tasks/templates, criar 'delete.html'
+32- Em tasks/views.py, criar view deleteTask (def deleteTask)
+33- Em tasks/urls.py, adicionar rota delete_task (path)
+34- Em tasks/templates/list.html, incluir &lt;a&gt; Delete
+    34.1- No browser, testar deletar alguma task
 
 ### Marcar Task completa/incompleta:
-36- Em tasks/templates/list.html, incluir 'if task.complete'
+35- Em tasks/templates/list.html, incluir 'if task.complete'
