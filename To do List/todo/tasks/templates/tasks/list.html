@@ -1,0 +1,17 @@
+<h3>To do</h3>
+
+<!--Informar isso após 25-->
+<form method="POST" action="/">
+    {% csrf_token %}
+    {{form}} <!--Se informar {{form.title}} aparecerá somente title para o form-->
+    <input type="submit" name="Create Task">
+</form>
+<!---->
+
+<!--Informar isso após item 22 em diante-->
+{% for task in tasks %}
+    <div>
+        <p>{{task}}</p>
+    </div>
+{% endfor %}
+<!---->
